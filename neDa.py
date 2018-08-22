@@ -11,7 +11,10 @@ def get_Top_Articles():
     cCursor = conn.cursor()
 
     """Define SQL-query and pass it over to the curser which execute the query and fetch the results"""
+    sQuery = "select * from pathCount order by count desc limit 3;"
+    """
     sQuery = "select path, count(*) as num from log where status = '200 OK' and path like '%/article%'group by path order by num desc limit 3;"
+    """
     cCursor.execute(sQuery)
     results = cCursor.fetchall()
 

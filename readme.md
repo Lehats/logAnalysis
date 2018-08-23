@@ -2,7 +2,7 @@
 
 create pathCount View:
 
-I decided to create this view, because it can be used in the queries of the get_Top_Articles()- and get_Top_Authors()-functions. So it cleans up both queries a bit.
+I decided to create this view, because it can be used in the queries of the get_Top_Articles()- and get_Top_Authors()-functions. So it cleans up both queries.
 
 sql-query to create pathCount view:
 

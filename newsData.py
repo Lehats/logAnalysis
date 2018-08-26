@@ -85,7 +85,7 @@ def count_Errors():
 
     """Define SQL-query and pass it over to the curser which execute the query
     and fetch the results"""
-    sQuery = """select date, (oneperc*errorCount) as errorPercent from
+    sQuery = """select to_char(date,'Mon DD, YYYY'), (oneperc*errorCount) as errorPercent from
                 (select date(time) as date2, 100/cast(count(*) as decimal) as
                 onePerc from log group by date2 order by date2) as
                 onePercTable, (select date(time) , count(*) as errorCount
